@@ -1,0 +1,18 @@
+{
+  "name": "rgb-tcs34725",
+  "version": "0.0.1",
+  "description": "A library to use the RGB color sensor with a JavaScript microcontroller",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rgb",
+    "color",
+    "sensor",
+    "tessel",
+    "tcs34725"
+  ],
+  "author": "Jon McKay <jon@technical.io>",
+  "license": "MIT"
+}

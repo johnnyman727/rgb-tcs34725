@@ -84,9 +84,9 @@ RGB.prototype._initialize = function(callback) {
       return self.failCallback(err, callback);
     }
     else {
-      self.setIntegrationTime(TCS34725_INTEGRATIONTIME_2_4MS, function(err) {
+      self.setIntegrationTime(TCS34725_INTEGRATIONTIME_700MS, function(err) {
         if (!self.failCallback(err, callback)) {
-          self.setGain(0x00, function(err) {
+          self.setGain(TCS34725_GAIN_1X, function(err) {
             if (!self.failCallback(err, callback)) {
               self._enable(callback);
             }
@@ -140,7 +140,8 @@ RGB.prototype._read16Bits = function(reg, callback) {
 }
 
 RGB.prototype._write8Bits = function(reg, value, callback) {
-  this.i2c.send(new Buffer([TCS34725_COMMAND_BIT | reg], value & 0xFF), callback);
+  console.log('writing', parseInt(TCS34725_COMMAND_BIT | reg).toString(16), parseInt(value & 0xFF).toString());
+  this.i2c.send(new Buffer([TCS34725_COMMAND_BIT | reg, value & 0xFF]), callback);
 }
 
 RGB.prototype.getRGBC = function(callback) {
@@ -156,7 +157,6 @@ RGB.prototype.getRGBC = function(callback) {
         callback(err);
       }
       else {
-        console.log('setting', colorValue);
         rgbc[color] = colorValue;
         callback();
       }
@@ -164,7 +164,6 @@ RGB.prototype.getRGBC = function(callback) {
   },
   function endReadings(err) {
     if (!self.failCallback(err, callback)) {
-      console.log('colors!', rgbc);
       if (callback) {
         callback(null, rgbc);
       }
@@ -196,7 +195,7 @@ RGB.prototype.readColor = function(color, callback) {
   console.log('set reg', reg);
 
   self._read16Bits(reg, function(err, color) {
-    console.log('read', err, color);
+
     if (!self.failCallback(err, callback)) {
       if (callback) {
         callback(null, color.readUInt16BE(0));
@@ -217,8 +216,7 @@ RGB.prototype.setLED = function(on, callback) {
 var tessel = require('tessel');
 var r = use(tessel.port.A);
 r.on('ready', function() {
-  console.log('use me!');
-  // r.setLED(false);
+  
 
   r.getRGBC(function(err, rgbc) {
     console.log('got this!', rgbc);

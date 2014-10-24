@@ -14,5 +14,8 @@
     "tcs34725"
   ],
   "author": "Jon McKay <jon@technical.io>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "async": "^0.9.0"
+  }
 }

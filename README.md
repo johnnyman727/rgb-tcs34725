@@ -1,12 +1,36 @@
 rgb-tcs34725
 ============
 
-A JavaScript driver for the TCS34725 RGB sensor. Use it to find the red, green, blue, or clear levels of anything you point it at. The API gives you access to the raw RGBC data, color temperatures, and lux intensity.
+A JavaScript driver for the TCS34725 RGB sensor. Use it to find the red, green, blue, or clear levels of anything you point it at. The API gives you access to the raw RGBC data, color temperatures, and lux intensity. You can by the breakout board from [Adafruit](http://www.adafruit.com/product/1334)
+
+![Breakout Image](http://www.adafruit.com/images/970x728/1334-00.jpg)
 
 The chip also has support for threshold interrupts on the clear channel and those APIs have been implemented here but not fully tested.
 
 ## Installation
 ```npm install rgb-tcs34725```
+
+## Hardware Connections to Tessel
+
+You can connect the module to any of the ports on Tessel:
+
+VIN  ->  Unconnected 
+
+GND  ->  GND 
+
+3V3  ->  3V3 
+
+SCL  ->  SCL
+
+SDA  ->  SDA
+
+INT  ->  GPIO 1
+
+LED  ->  GPIO 2
+
+
+
+
 
 ## Example Usage
 ```.js

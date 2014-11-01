@@ -1,7 +1,7 @@
 rgb-tcs34725
 ============
 
-A JavaScript driver for the TCS34725 RGB sensor. Use it to find the red, green, blue, or clear levels of anything you point it at. The API gives you access to the raw RGBC data, color temperatures, and lux intensity. You can by the breakout board from [Adafruit](http://www.adafruit.com/product/1334)
+A JavaScript driver for the TCS34725 RGB sensor. Use it to find the red, green, blue, or clear levels of anything you point it at. The API gives you access to the raw RGBC data, color temperatures, and lux intensity. You can buy the breakout board from [Adafruit](http://www.adafruit.com/product/1334).
 
 ![Breakout Image](http://www.adafruit.com/images/970x728/1334-00.jpg)
 

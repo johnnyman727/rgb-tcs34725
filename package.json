@@ -1,6 +1,6 @@
 {
   "name": "rgb-tcs34725",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A library to use the RGB color sensor with a JavaScript microcontroller",
   "main": "index.js",
   "scripts": {

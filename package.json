@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:johnnyman727/rgb-tcs34725.git"
+  },
   "keywords": [
     "rgb",
     "color",

@@ -28,8 +28,13 @@ INT  ->  GPIO 1
 
 LED  ->  GPIO 2
 
+The wiring is the same for any module port on Tessel 1 or Tessel 2.
 
+![](https://cloud.githubusercontent.com/assets/454690/10564833/39ff0ec6-7590-11e5-8348-418f406d57a8.jpg)
 
+![](https://cloud.githubusercontent.com/assets/454690/10564834/3adbdc8e-7590-11e5-932c-4cd199ff4df6.jpg)
+
+![](https://cloud.githubusercontent.com/assets/454690/10564835/3bd98276-7590-11e5-9959-c3d8ac99762f.jpg)
 
 
 ## Example Usage
